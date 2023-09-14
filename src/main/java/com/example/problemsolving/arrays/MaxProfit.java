@@ -1,4 +1,4 @@
-package com.example.problemsolving;
+package com.example.problemsolving.arrays;
 
 public class MaxProfit {
     public static void main(String[] args) {

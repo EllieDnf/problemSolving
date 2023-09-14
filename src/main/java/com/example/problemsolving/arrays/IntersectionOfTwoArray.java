@@ -1,4 +1,4 @@
-package com.example.problemsolving;
+package com.example.problemsolving.arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
