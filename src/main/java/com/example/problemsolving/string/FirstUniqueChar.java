@@ -11,8 +11,8 @@ public class FirstUniqueChar {
     }
     public static int firstUniqChar(String s) {
         Map<Integer, Character> map = new HashMap();
-        for (int i=0;i<s.length();i++){
-            map.put(i,s.charAt(i));
+        for (int i=0;i<s.length();i++) {
+            map.put(i, s.charAt(i));
         }
         for (int i=0; i<s.length();i++){
             map.remove(i);

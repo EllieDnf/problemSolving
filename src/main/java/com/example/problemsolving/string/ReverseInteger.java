@@ -26,7 +26,7 @@ public class ReverseInteger {
 
         for (int i=0;i<num.size();i++){
             ans=ans*10+num.get(i);
-            if (i==num.size()-2 && ans> ((int)Math.pow(2,31)-1)/10) return 0;
+            if (i == num.size() - 2 && ans > ((int) Math.pow(2, 31) - 1) / 10) return 0;
         }
         return ans*sign;
     }
