@@ -8,6 +8,28 @@ public class ProductExceptSelf {
     }
 
     public static int[] productExceptSelf(int[] nums) {
+        int n = nums.length;
+        int[] ans = new int[n];
+        int[] leftProducts = new int[n];
+        int[] rightProducts = new int[n];
+
+        leftProducts[0] = 1;
+        for (int i = 1; i < n; i++) {
+            leftProducts[i] = leftProducts[i - 1] * nums[i - 1];
+        }
+
+        rightProducts[n - 1] = 1;
+        for (int i = n - 2; i >= 0; i--) {
+            rightProducts[i] = rightProducts[i + 1] * nums[i + 1];
+        }
+
+        for (int i = 0; i < n; i++) {
+            ans[i] = rightProducts[i] * leftProducts[i];
+        }
+        return ans;
+    }
+
+    public static int[] productExceptSelf2(int[] nums) {
         int[] ans = new int[nums.length];
         int countZero = 0;
         int idxZero = -1;
@@ -23,17 +45,9 @@ public class ProductExceptSelf {
             return ans;
         }
         for (int i = 0; i < nums.length; i++) {
-            ans[i] = product(nums) / nums[i];
+            ans[i] = productExceptIdx(nums, i);
         }
         return ans;
-    }
-
-    public static int product(int[] nums) {
-        int product = 1;
-        for (int i = 0; i < nums.length; i++) {
-            product = product * nums[i];
-        }
-        return product;
     }
 
     public static int productExceptIdx(int[] nums, int idx) {
