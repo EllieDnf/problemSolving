@@ -25,7 +25,7 @@ public class MinStack {
     }
 
     public int top() {
-        if(!stack.isEmpty()) return stack.peek();
+        if (!stack.isEmpty()) return stack.peek();
         return -1;
     }
 
