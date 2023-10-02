@@ -1,4 +1,4 @@
-package com.example.problemsolving.TwoPointers;
+package com.example.problemsolving.twoPointers;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.example.problemsolving.TwoPointers;
+package com.example.problemsolving.twoPointers;
 
 public class ValidPalindrome {
     public static void main(String[] args) {
