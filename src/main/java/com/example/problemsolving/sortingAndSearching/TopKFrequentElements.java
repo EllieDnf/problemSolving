@@ -10,12 +10,14 @@ public class TopKFrequentElements {
         System.out.println(Arrays.toString(topKFrequent(new int[]{1,3}, 2)));
     }
     public static int[] topKFrequent(int[] nums, int k) {
+
         int[] ans = new int[k];
 
         Map<Integer,Integer> count= new HashMap<>();
         for (int num : nums){
             count.put(num, count.getOrDefault(num,0)+1);
         }
+
         List<Integer> valueList= new ArrayList<>(count.values());
         Collections.sort(valueList,Collections.reverseOrder());
 

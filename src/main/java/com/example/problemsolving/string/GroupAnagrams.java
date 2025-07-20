@@ -1,12 +1,27 @@
 package com.example.problemsolving.string;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 public class GroupAnagrams {
     public static void main(String[] args) {
         System.out.println(groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"}));
     }
+    public int[] topKFrequent(int[] nums, int k) {
+        int[] ans = new int[k];
+        HashMap<Integer,Integer> frequency = new HashMap<>();
+        for(int x: nums ){
+           if (!frequency.containsKey(x)) frequency.put(x,1);
+           else frequency.put(x,frequency.get(x)+1);
+        }
+        Integer [] values = (Integer[]) frequency.values().stream().sorted().toArray();
 
+        int i=0;
+        while (i<=k){
+           // if
+        }
+        return ans;
+    }
     public static List<List<String>> groupAnagrams(String[] strs) {
         List<List<String>> ans = new ArrayList<>();
 
